@@ -12,10 +12,10 @@ from sklearn.metrics import accuracy_score
 
 df=pd.read_csv("Iris.csv")
 
-#print(df)
+print(df)
 
-#print(df.head(10))
-#print(df.tail(10))
+print(df.head(10))
+print(df.tail(10))
 df.info()
 df.describe()
 print(df.shape)
@@ -62,7 +62,6 @@ xtrain, xtest, ytrain, ytest = train_test_split(xside, yside, test_size= 0.4)
 
 model=SVC()
 model.fit(xtrain, ytrain)
-predict = model.predi
-ct(xtest)
+predict = model.predict(xtest)
 
 print(accuracy_score(ytest,predict)*100)
